@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="signup.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup | Dominas</title>
+    </head>
+    <body>
+        <form class="form">
+            <label class="signup-name">Domina's Pastry</label>
+            <div class="ques">
+                <label for="first-name" >First Name:</label>
+                <input class="first-name" type="text" required>
+            </div>
+            <div class="ques">
+                <label for="last-name">Last Name:</label>
+                <input class="last-name" type="text">
+            </div>
+            <div class="ques">
+                <label for="email" >Email:</label>
+                <input class="email" type="email">
+            </div>
+            <div class="ques">
+                <label for="creapassword">Create Password:</label>
+                <input type="password" name="creapassword" class="creapassword">
+            </div>
+            <div class="ques">
+                <label for="confpassword">Confirm Password:</label>
+                <input type="password" name="confpassword" class="confpassword">
+                <div class="not-equal"></div>
+            </div>
+            <div class="submit-div">
+                <input type="submit" value="Signup" class="signup-button">
+                <a class="login" href="../login/login.html">Login</a>
+            </div>            
+        </form>
+    </body>
+    <script src="signup.js"></script>
+</html>

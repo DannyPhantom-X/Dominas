@@ -1,0 +1,171 @@
+body{
+    padding: 20px;
+    background-color:  rgb(186, 186, 231);
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    column-gap: 200px;
+    padding-top: 62px;
+}
+.cart-cont-details{
+    display: grid;
+    row-gap: 50px;
+    transition: filter 0.2s;
+}
+.cart-cont-img{
+    display: grid;
+    height: 270px;
+    align-content: center;
+    justify-items: center;
+}
+.cart-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(228, 216, 216);
+    border-radius: 10px;
+    column-gap: 10px ;
+}
+.cart-img{
+    width: 90%;
+    border-radius: 5px;
+    height: 200px;
+}
+.cart-info{
+    font-size: 20px;
+    height: 100%;
+    align-content: center;
+}
+.order-info{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.order-summary{
+    background-color: rgb(228, 216, 216);
+    align-items: center;
+    height: 200px;
+    border-radius: 10px;
+    /*position: fixed;
+    right: 50px;
+    left: 700px;
+    top: 150px;*/
+    height: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: filter 0.2s;   
+}
+.items,.order-numbers{
+    display: grid;
+    row-gap: 5px;
+}
+.line{
+    height: 1px;
+    background-color: grey;
+}
+.header{
+    display: flex;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    padding-right: 20px;
+    padding-left: 10px;
+    z-index: 2;
+}
+@media screen and (max-width: 900px){
+    body{
+        grid-template-columns: 1fr;
+        row-gap: 70px;
+    }   
+}
+.name{
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: orange;
+    cursor: pointer;
+}
+.cart{
+    display: flex;
+    flex: 2;
+    justify-content: right;
+    align-items: end;
+}
+.search{
+    display: flex;
+    flex: 5;
+    justify-items: center;
+}
+.order-button{
+    width: 50%;
+    height: 60%;
+    background-color: orange;
+    border: none;
+    border-radius: 2px;
+    font-size: medium;
+    font-weight: bold;
+}
+.order-button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.order-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+}
+.nob{
+    margin-left: 7%;
+    margin-right: 7%;
+}
+.confirm-order-style{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    left: 0;
+    height: 250px;
+    bottom: 0;
+    background-color: white;
+    font-size: 30px;
+}
+.confirm-statement{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.confirm-order-button{
+    background-color: orange;
+    width: 120px; 
+    height: 50px;
+    border: none;
+    border-radius: 5%;
+    font-size: large;
+}
+.confirm-order-div{
+    display: flex;
+    justify-content: right;
+    margin-right: 10px;
+}
+.cancel{
+    display: flex;
+    justify-content: right;
+    margin-right: 15px;
+    margin-top: 10px;    
+}
+.cancel button{
+    border: none;
+    width: 50px;
+    height: 30px;
+    font-size: medium;
+    background-color: rgb(186, 186, 231);
+}
+.cancel button:hover{
+    background-color: black;
+    cursor: pointer;
+}

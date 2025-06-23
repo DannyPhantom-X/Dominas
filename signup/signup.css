@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(186, 186, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+input{
+    outline: none;
+    height: 25px;
+    width: 40%;
+    border-radius: 3px;
+    border-style: none;
+    background-color: rgba(255, 166, 0, 0.451);
+}
+.form{
+    display: flex;
+    flex-direction: column  ;
+    background-color: rgb(228, 216, 216);
+    gap: 30px;
+    width: 500px;
+    border-radius: 5px;
+}
+.signup-name{
+    background-color: black;
+    color: orange;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 12px;
+}
+.ques{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.submit-div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    align-items: center;
+}
+.signup-button{
+    background-color: orange;
+    height: 30px;
+    width: 15%;
+    font-size: 15px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+.signup-button:active{
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.15s;
+}
+.not-equal{
+    color: red;
+    text-align: center;
+    font-size: 12px;
+    font-family: arial;
+    font-weight: bold;
+}
+.ques label{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 90%;
+}
+.ques input{
+    width: 70%;
+}
+.login{
+    color: rgb(122, 80, 3);
+    font-size: large;
+}

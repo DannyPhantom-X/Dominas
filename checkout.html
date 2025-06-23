@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="general.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Dominas</title>
+</head>
+<body>
+    <div class="header">
+        <div class="name">Domina's Pastry</div>
+        <div class="search"></div>
+        <div class="cart"></div>
+    </div>
+
+    <div class="cart-cont-details"></div>
+
+    <div class="order-summary">
+        <div style="text-align: center; font-size: large; font-weight: bolder;"><p>Order Summary</p></div>
+        <div class="line"></div>
+        <div class="order-info">
+            <div class="items">
+                <p>Items  (<span class="no-of-items"></span>):</p>
+                <p>Shipping and Handling:</p>
+                <div class="line"></div> 
+                <p>Total:</p>
+            </div>
+
+            <div class="order-numbers">
+                <p class="para js-total-price"></p>
+                <p class="para js-shipping-price"></p>
+                <div class="line"></div> 
+                <p class="para js-total-money"></p>
+            </div>
+        </div>
+        <div class="line" ></div>
+        <div class="order-div">
+            <button class="order-button">Place Order</button>
+        </div>
+    </div>
+        <div class="confirm-order"></div>
+</body>
+<script type="module" src="checkout.js"></script>
+</html>

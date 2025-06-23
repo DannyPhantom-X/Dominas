@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght
+    @0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1
+    ,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domina's Pastries Page</title>
+</head>
+<body class="body">
+    <div class="header">
+        <div>
+            <span class="name-domina">Domina's</span> <span class="pastry">Pastries</span>
+        </div>
+        <button class="cart-button">
+            <a href="cart.html">
+            <img src="thumbnails/cart-button-img.png" class="cart-img">
+        </a>
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="selection-1">
+            <div style="width: 100%; 
+            height: 300px;">
+                    <img class="chocolate-doughnuts-img" src="thumbnails/chocolate-doughnuts-img.webp">            
+            </div>
+            <div>
+                <p class="pastry">Chocolate Doughnut</p>
+            </div>
+            <div>
+                <p>Price</p>
+            </div>
+            <div class="added"></div>
+            <div class="js-add-cart-container0 add-cart-container">
+                <button class="add-cart-button js-add-cart-button">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="selection-2">
+            <div style="width: 100%; 
+            height: 300px;">
+                <img class="jam-doughnuts-img" src="thumbnails/jam-doughnut-img.jpg">
+            </div>
+            <div>
+                <p class="pastry">Jam Doughnut</p>
+            </div>
+            <div>
+                <p>Price</p>
+            </div>
+            <div class="add-cart-container js-add-cart-container1">
+                <button class="add-cart-button js-add-cart-button" >ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="selection-3">
+            <div style="width: 100%; 
+            height: 300px;">
+                <img class="sausage-roll-img" src="thumbnails/sausage-roll-img.jpeg">
+            </div>
+            <div>
+                <p class="pastry">Sausage Roll</p>
+            </div>
+            <div>
+                <p>Price</p>
+            </div>
+            <div class="js-add-cart-container2 add-cart-container">
+                <button class="add-cart-button js-add-cart-button">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="selection-4">
+            <div style="width: 100%; 
+            height: 300px;">
+                <img class="classic-cake-doughnut" src="thumbnails/classic-cake-doughnuts-img.jpg">
+            </div>
+            <div>
+                <p class="pastry">Classic Cake Doughnut</p>
+            </div>
+            <div>
+                <p>Price</p>
+            </div>
+            <div class="js-add-cart-container3  add-cart-container">
+                <button class="add-cart-button js-add-cart-button">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="selection-5">
+            <div style="width: 100%; 
+            height: 300px;">
+                <img class="milky-doughnut" src="thumbnails/milky-doghnututs.jpg">
+            </div>
+            <div>
+                <p class="pastry">Milky Doughnut</p>
+            </div>
+            <div>
+                <p>Price</p>
+            </div>
+            <div class="js-add-cart-container4 add-cart-container">
+                <button class="add-cart-button js-add-cart-button">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="selection-6">
+            <div style="width: 100%; 
+            height: 300px;">
+                <img class="meat-pie" src="thumbnails/meat-pie-img.jpg">
+            </div>
+            <div>
+                <p class="pastry">Meat pie</p>
+            </div>
+            <div>
+                <p>Price</p>
+            </div>
+            <div class="js-add-cart-container5 add-cart-container">
+                <button class="add-cart-button js-add-cart-button">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+    <script src="home.js">
+        let nob = [];
+function onclickSubtract(num2) {
+    console.log(num2)
+    
+    if (nob[num2] === 1) {
+    document.querySelector(`.js-add-cart-container${num2}`).innerHTML = `<button class= 'add-cart-button js-add-cart-button' onclick='addCart(${num2});'>ADD TO CART</button>`;
+    document.querySelector(`.js-add-cart-container${num2}`).style.display = '';
+    } 
+    else{
+        nob[num2] = nob[num2] - 1
+        addCart(num2);
+    }
+}
+function onclickAdd(num3) {
+    nob[num3] += 1
+    addCart(num3);
+}
+function addCart(num) {
+    for (let i = 0; i <= num; i++) {
+        nob.push(1)
+    }
+    console.log(nob)
+    console.log(nob)
+    console.log(nob[num])
+    document.querySelector(`.js-add-cart-container${num}`).innerHTML = `<button class='edit-nob-subtract' onclick='onclickSubtract(${num})'>-</button><span>${nob[num]}</span><button class='edit-nob-add' onclick='onclickAdd(${num})'>+</button>`;   
+    document.querySelector(`.js-add-cart-container${num}`).style.display = 'flex'
+    document.querySelector(`.js-add-cart-container${num}`).style.justifyContent = 'space-between'
+    document.querySelector(`.js-add-cart-container${num}`).style.alignItems = 'center'
+}
+document.querySelectorAll('.js-add-cart-button').forEach((buttonCart, index) => {
+    buttonCart.addEventListener('click', () => {
+        console.log('hiii')
+        addCart(index)
+    })
+
+})
+    </script>
+
+</body>
+</html>
